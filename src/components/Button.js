@@ -1,12 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ButtonStories from './Button.stories';
 
 
-export default function Button({ Button: { active, state }, onArchiveButton, onPinButton }) {
+export default function Button({ loading }) {
   return (
     <div className="list-item">
       <label className="checkbox">
       </label>
+      {
+        loading && <h1>Loading = true</h1>
+      }
       <div className="title">
       </div>
     </div>
@@ -14,9 +18,9 @@ export default function Button({ Button: { active, state }, onArchiveButton, onP
 }
 
 Button.propTypes = {
-    Button: PropTypes.shape({
-        active: PropTypes.bool
-    }),
-    onArchiveButton: PropTypes.func,
-    onPinButton: PropTypes.func
+  loading: PropTypes.bool
+}
+
+Button.defaultProps = {
+  loading: false
 }
