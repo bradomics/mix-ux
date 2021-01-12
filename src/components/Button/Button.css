@@ -1,0 +1,8 @@
+.button {
+    color: white;
+    font-style: sans-serif;
+    background: linear-gradient(45deg, hotpink, orangered);
+    border: none;
+    padding: .8em 1em;
+    border-radius: .2em;
+}

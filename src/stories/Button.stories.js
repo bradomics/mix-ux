@@ -1,36 +1,19 @@
-import React from 'react';
+import React from 'react'
+import { action } from '@storybook/addon-actions';
 
-import { Button } from './Button';
+import Button from '../components/Button';
 
 export default {
-  title: 'Example/Button',
-  component: Button,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
-};
+    title: 'Button',
+    component: Button,
+}
 
-const Template = (args) => <Button {...args} />;
+export const Text = () => <Button oonClick={action('clicked')}>Hello Button</Button>;
 
-export const Primary = Template.bind({});
-Primary.args = {
-  primary: true,
-  label: 'Button',
-};
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
-};
-
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
-};
+export const Emoji = () => (
+    <Button onClick={action('clicked')}>
+        <span role="img" aria-label="so cool">
+            😀 😎 👍 💯
+        </span>
+    </Button>
+)
