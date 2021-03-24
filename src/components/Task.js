@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-export default function Task({ task: { id, title, state }, onArchiveTask, onPinTask }) {
+export default function ListItem({ task: { id, title, state }, onArchiveTask, onPinTask }) {
   return (
     <div className={`list-item ${state}`}>
       <label className="checkbox">
@@ -30,7 +30,7 @@ export default function Task({ task: { id, title, state }, onArchiveTask, onPinT
   );
 }
 
-Task.propTypes = {
+ListItem.propTypes = {
     task: PropTypes.shape({
         id: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,

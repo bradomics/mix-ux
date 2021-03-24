@@ -1,15 +1,15 @@
 import React from 'react';
 
-import TaskList from './TaskList';
+import List from './TaskList';
 import * as TaskStories from './Task.stories';
 
 export default {
-  component: TaskList,
-  title: 'TaskList',
+  component: List,
+  title: 'List',
   decorators: [story => <div style={{ padding: '3rem' }}>{story()}</div>],
 };
 
-const Template = args => <TaskList {...args} />;
+const Template = args => <List {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

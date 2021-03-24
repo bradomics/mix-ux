@@ -1,26 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ButtonStories from './Button.stories';
+import './Button/Button.css'
 
 
-export default function Button({ loading }) {
+export default function Button({ loading, active, className }) {
   return (
-    <div className="list-item">
-      <label className="checkbox">
-      </label>
+    <button className={className}>
       {
-        loading && <h1>Loading = true</h1>
+        loading && "Loading = true"
       }
-      <div className="title">
-      </div>
-    </div>
+      {
+        active && "Active = true</h1"
+      }
+    </button>
   );
 }
 
 Button.propTypes = {
-  loading: PropTypes.bool
+  loading: PropTypes.bool,
+  active: PropTypes.bool
 }
 
 Button.defaultProps = {
-  loading: false
+  loading: false,
+  active: false
 }

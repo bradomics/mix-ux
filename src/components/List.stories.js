@@ -1,13 +1,13 @@
 import React from 'react';
 
-import ListItem from './Task';
+import Task from './Task';
 
 export default {
-  component: ListItem,
+  component: Task,
   title: 'List Item',
 };
 
-const Template = args => <ListItem {...args} />;
+const Template = args => <Task {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
