@@ -4,25 +4,22 @@ import ButtonStories from './Button.stories';
 import './Button/Button.css'
 
 
-export default function Button({ loading, active, className }) {
+export default function Button({ loading, active, text, className }) {
   return (
-    <button className={className}>
-      {
-        loading && "Loading = true"
-      }
-      {
-        active && "Active = true</h1"
-      }
+    <button className={`${className} ${loading && 'btn-loading'} ${active && 'btn-active'}`}>
+      {text}
     </button>
   );
 }
 
 Button.propTypes = {
   loading: PropTypes.bool,
+  text: PropTypes.string,
   active: PropTypes.bool
 }
 
 Button.defaultProps = {
   loading: false,
+  text: 'Primary Button',
   active: false
 }

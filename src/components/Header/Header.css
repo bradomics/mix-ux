@@ -5,3 +5,8 @@
     border-bottom: solid 2px #3b3b3b;
     padding-bottom: .2em;
 }
+
+.header-dark {
+    color: #fff;
+    border-bottom: solid 2px #fff;
+}

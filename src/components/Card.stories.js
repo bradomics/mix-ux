@@ -19,10 +19,6 @@ export const Default = Template.bind({});
 
 export const Dark = DarkTemplate.bind({});
 
-export const Square = SquareTemplate.bind({});
-
-export const Outline = OutlineTemplate.bind({});
-
 
 Default.args = {
     loading: false,
@@ -32,15 +28,6 @@ Default.args = {
 
 Dark.args = {
   loading: false,
-  active: false
-};
-
-Square.args = {
-  loading: false,
-  active: false
-};
-
-Outline.args = {
-  loading: false,
-  active: false
+  active: false,
+  title: 'Dark Card'
 };

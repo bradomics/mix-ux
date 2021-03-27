@@ -10,15 +10,3 @@ export default function Background({ title, loading, className }) {
     </div>
   );
 }
-
-Background.propTypes = {
-  title: PropTypes.string,
-  loading: PropTypes.bool,
-  active: PropTypes.bool
-}
-
-Background.defaultProps = {
-  title: 'Card Title',
-  loading: false,
-  active: false
-}

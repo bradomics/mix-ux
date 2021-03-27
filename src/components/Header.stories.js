@@ -1,18 +1,27 @@
 import React from 'react';
-
-import Header from '../components/Header';
+import Header from './Header';
 
 export default {
-    title: 'Header',
-    component: Header,
+  component: Header,
+  title: 'Header'
 };
 
-export const Text = () => <Header>Header</Header>;
+const Template = args => <Header {...args} className="header" />;
+const DarkTemplate = args => <Header {...args} className="header header-dark"/>;
 
-export const Emoji = () => (
-    <Header>
-        <span role="img" aria-label="so cool">
-            😎🎧💻👾
-        </span>
-    </Header>
-)
+
+export const Default = Template.bind({});
+export const Dark = DarkTemplate.bind({});
+
+
+Default.args = {
+    loading: false,
+    active: false,
+    text: 'Header'
+};
+
+Dark.args = {
+  loading: false,
+  active: false,
+  text: 'Dark Header'
+};

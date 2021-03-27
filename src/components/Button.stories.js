@@ -30,16 +30,19 @@ Default.args = {
 };
 
 Secondary.args = {
+  text: 'Secondary Button',
   loading: false,
   active: false
 };
 
 Square.args = {
+  text: 'Square Button',
   loading: false,
   active: false
 };
 
 Outline.args = {
+  text: 'Outline Button',
   loading: false,
   active: false
 };

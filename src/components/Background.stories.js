@@ -6,15 +6,15 @@ export default {
   title: 'Background'
 };
 
-const Template = args => <Background {...args} className="card" />;
+const Template = () => <Background className="card" />;
 
-const DarkTemplate = args => <Background {...args} className="card bg-dark"/>;
+const DarkTemplate = ()  => <Background className="card bg-dark"/>;
 
-const PolkaDotTemplate = args => <Background {...args} className="card bg-polka"/>;
+const PolkaDotTemplate = () => <Background className="card bg-polka"/>;
 
-const ZigZagTemplate = args => <Background {...args} className="card bg-zig-zag"/>;
+const ZigZagTemplate = () => <Background className="card bg-zig-zag"/>;
 
-const LinesTemplate = args => <Background {...args} className="card bg-lines"/>;
+const LinesTemplate = () => <Background className="card bg-lines"/>;
 
 
 export const Default = Template.bind({});
@@ -26,30 +26,3 @@ export const PolkaDot = PolkaDotTemplate.bind({});
 export const ZigZag = ZigZagTemplate.bind({});
 
 export const Lines = LinesTemplate.bind({});
-
-
-Default.args = {
-    loading: false,
-    active: false,
-    title: 'Default Card'
-};
-
-Dark.args = {
-  loading: false,
-  active: false
-};
-
-PolkaDot.args = {
-  loading: false,
-  active: false
-};
-
-ZigZag.args = {
-    loading: false,
-    active: false
-};
-
-Lines.args = {
-    loading: false,
-    active: false
-};
