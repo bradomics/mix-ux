@@ -8,7 +8,7 @@ export default {
 
 const Template = args => <Card {...args} className="card" />;
 
-const SecondaryTemplate = args => <Card {...args} className="secondary"/>;
+const DarkTemplate = args => <Card {...args} className="card bg-dark"/>;
 
 const SquareTemplate = args => <Card {...args} className="square"/>;
 
@@ -17,7 +17,7 @@ const OutlineTemplate = args => <Card {...args} className="outline"/>;
 
 export const Default = Template.bind({});
 
-export const Secondary = SecondaryTemplate.bind({});
+export const Dark = DarkTemplate.bind({});
 
 export const Square = SquareTemplate.bind({});
 
@@ -30,7 +30,7 @@ Default.args = {
     title: 'Default Card'
 };
 
-Secondary.args = {
+Dark.args = {
   loading: false,
   active: false
 };

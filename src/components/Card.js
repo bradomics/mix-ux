@@ -6,7 +6,7 @@ import './Card/Card.css'
 
 export default function Card({ title, loading, className }) {
   return (
-    <div className={`${className} `}>
+    <div className={`${className}`}>
         <div className={`card-title ${loading && 'card-title-loading'}`}>
             <h3>{loading || title}</h3>
         </div>
