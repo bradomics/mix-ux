@@ -6,9 +6,15 @@ import './Accordion/Accordion.css'
 
 export default function Accordion({ title, accordionItems, loading, className }) {
     const handleAccordionClick = (accordionSectionIndex) => {
-
-        document.querySelectorAll('.accordion-section')[accordionSectionIndex].classList.remove('collapsed')
-        document.querySelectorAll('.accordion-content')[accordionSectionIndex].classList.remove('accordion-content-hidden')
+        if (document.querySelectorAll('.accordion-section')[accordionSectionIndex].classList.contains('collapsed')) {
+            document.querySelectorAll('.accordion-section')[accordionSectionIndex].classList.remove('collapsed')
+            document.querySelectorAll('.accordion-content')[accordionSectionIndex].classList.remove('accordion-content-hidden')
+            document.querySelectorAll('.accordion-icon')[accordionSectionIndex].classList.add('accordion-icon-rotated')
+        } else {
+            document.querySelectorAll('.accordion-section')[accordionSectionIndex].classList.add('collapsed')
+            document.querySelectorAll('.accordion-content')[accordionSectionIndex].classList.add('accordion-content-hidden')
+            document.querySelectorAll('.accordion-icon')[accordionSectionIndex].classList.remove('accordion-icon-rotated')
+        }
     }
     return (
         <div className={`${className}`}>
@@ -18,7 +24,7 @@ export default function Accordion({ title, accordionItems, loading, className })
                     return(
                         <div className={`accordion-section ${accordionSection.expanded || 'collapsed'}`} onClick={() => handleAccordionClick(accordionSectionIndex)}>
                         <div className="accordion-title">
-                            {accordionSection.title}<Plus/>
+                            {accordionSection.title}<Plus className="accordion-icon"/>
                         </div>
                         <div className={`accordion-content ${accordionSection.expanded || 'accordion-content-hidden'}`}>
                             {accordionSection.content}
