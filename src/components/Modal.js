@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ModalStories from './Modal.stories';
 import './Modal/Modal.css'
+import { X } from 'react-feather'
 
 
-export default function Modal({ title, loading, className }) {
+export default function Modal({ title, isVisible, loading, className }) {
   return (
-    <div className={`${className}`}>
-        <div className={`card-title ${loading && 'card-title-loading'}`}>
+    <div className={`${className} ${isVisible && 'visible'}`}>
+        <div className={`modal-header ${loading && 'modal-header-loading'}`}>
             <h3>{loading || title}</h3>
+            <span className="modal-close-icon"><X/></span>
         </div>
-        <div className={`${loading && 'card-body-loading'} card-body`}>
+        <div className={`${loading && 'modal-body-loading'} modal-body`}>
 
         </div>
     </div>
@@ -19,12 +20,14 @@ export default function Modal({ title, loading, className }) {
 
 Modal.propTypes = {
   title: PropTypes.string,
+  isVisible: PropTypes.bool,
   loading: PropTypes.bool,
   active: PropTypes.bool
 }
 
 Modal.defaultProps = {
   title: 'Modal Title',
+  isVisible: true,
   loading: false,
   active: false
 }

@@ -6,9 +6,9 @@ export default {
   title: 'Modal'
 };
 
-const Template = args => <Modal {...args} className="card" />;
+const Template = args => <Modal {...args} className="modal" />;
 
-const DarkTemplate = args => <Modal {...args} className="card bg-dark"/>;
+const DarkTemplate = args => <Modal {...args} className="modal modal-dark"/>;
 
 
 export const Default = Template.bind({});
@@ -17,12 +17,14 @@ export const Dark = DarkTemplate.bind({});
 
 
 Default.args = {
+    isVisible: true,
     loading: false,
     active: false,
     title: 'Deafult Modal'
 };
 
 Dark.args = {
+  isVisible: true,
   loading: false,
   active: false,
   title: 'Dark Modal'
