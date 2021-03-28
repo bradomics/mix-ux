@@ -17,15 +17,11 @@ export const Dark = DarkTemplate.bind({});
 
 
 Default.args = {
-    isVisible: true,
     loading: false,
-    active: false,
-    title: 'Deafult Modal'
+    title: 'Deafult Modal',
 };
 
 Dark.args = {
-  isVisible: true,
   loading: false,
-  active: false,
-  title: 'Dark Modal'
+  title: 'Dark Modal',
 };
