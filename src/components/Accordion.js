@@ -6,6 +6,7 @@ import './Accordion/Accordion.css'
 
 export default function Accordion({ title, accordionItems, loading, className }) {
     const handleAccordionClick = (accordionSectionIndex) => {
+
         document.querySelectorAll('.accordion-section')[accordionSectionIndex].classList.remove('collapsed')
         document.querySelectorAll('.accordion-content')[accordionSectionIndex].classList.remove('accordion-content-hidden')
     }
@@ -13,12 +14,13 @@ export default function Accordion({ title, accordionItems, loading, className })
         <div className={`${className}`}>
             {
                 accordionItems.map((accordionSection, accordionSectionIndex) => {
+                    console.log('accordionSection.expanded -> ', accordionSection.expanded)
                     return(
-                        <div className="accordion-section collapsed" onClick={() => handleAccordionClick(accordionSectionIndex)}>
+                        <div className={`accordion-section ${accordionSection.expanded || 'collapsed'}`} onClick={() => handleAccordionClick(accordionSectionIndex)}>
                         <div className="accordion-title">
                             {accordionSection.title}<Plus/>
                         </div>
-                        <div className="accordion-content accordion-content-hidden">
+                        <div className={`accordion-content ${accordionSection.expanded || 'accordion-content-hidden'}`}>
                             {accordionSection.content}
                             Here is some sweet accordion content.
                         </div>
@@ -41,11 +43,13 @@ Accordion.defaultProps = {
   accordionItems: [
       {
           title: 'Woop',
-          content: 'DoubleWoop'
+          content: 'DoubleWoop',
+          expanded: false 
       },
       {
         title: 'Woop2',
-        content: 'WeepWoop'
+        content: 'WeepWoop',
+        expanded: false
     },
   ],
   loading: false,

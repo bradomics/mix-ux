@@ -23,11 +23,13 @@ Default.args = {
     accordionItems: [
         {
             title: 'Woop',
-            content: 'DoubleWoop'
+            content: 'DoubleWoop',
+            expanded: false
         },
         {
           title: 'Woop2',
-          content: 'WeepWoop'
+          content: 'WeepWoop',
+          expanded: false
       },
     ]
 };
@@ -39,11 +41,13 @@ Dark.args = {
     accordionItems: [
         {
             title: 'Woop',
-            content: 'DoubleWoop'
+            content: 'DoubleWoop',
+            expanded: false
         },
         {
             title: 'Woop2',
-            content: 'WeepWoop'
+            content: 'WeepWoop',
+            expanded: false
         },
     ]
 };
