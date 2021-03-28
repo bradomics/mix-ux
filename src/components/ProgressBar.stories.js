@@ -6,9 +6,9 @@ export default {
   title: 'ProgressBar'
 };
 
-const Template = args => <ProgressBar {...args} className="card" />;
+const Template = args => <ProgressBar {...args} className="progress-bar" />;
 
-const DarkTemplate = args => <ProgressBar {...args} className="card bg-dark"/>;
+const DarkTemplate = args => <ProgressBar {...args} className="progress-bar progress-bar-dark"/>;
 
 
 export const Default = Template.bind({});
@@ -17,13 +17,13 @@ export const Dark = DarkTemplate.bind({});
 
 
 Default.args = {
-    loading: false,
-    active: false,
+    percentComplete: 50,
+    animated: true,
     title: 'Default Card'
 };
 
 Dark.args = {
-  loading: false,
-  active: false,
-  title: 'Dark Card'
+    percentComplete: 50,
+    animated: true,
+    title: 'Dark Card'
 };

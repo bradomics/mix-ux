@@ -1,29 +1,33 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import './ProgressBar/ProgressBar.css'
 
 
-export default function ProgressBar({ title, loading, className }) {
-  return (
-    <div className={`${className}`}>
-        <div className={`card-title ${loading && 'card-title-loading'}`}>
-            <h3>{loading || title}</h3>
-        </div>
-        <div className={`${loading && 'card-body-loading'} card-body`}>
+export default function ProgressBar({ percentComplete, animated, className }) {
+    const [completed, setCompleted] = useState(0);
 
+    useEffect(() => {
+        setInterval(() => setCompleted(Math.floor(Math.random() * 100) + 1), 2000);
+    }, []);
+
+    const completedStyles =  {
+        width: `${percentComplete}%`,
+    };
+    return (
+        <div className={`${className}`}>
+            <div id="progress-bar-percentage" style={completedStyles}><b><p>{percentComplete}%</p></b></div>
         </div>
-    </div>
-  );
+    );
 }
 
 ProgressBar.propTypes = {
-  title: PropTypes.string,
-  loading: PropTypes.bool,
-  active: PropTypes.bool
+    percentComplete: PropTypes.number,
+    animated: PropTypes.bool,
+    active: PropTypes.bool
 }
 
 ProgressBar.defaultProps = {
-  title: 'Card Title',
-  loading: false,
-  active: false
+    percentComplete: 50,
+    animated: true,
+    active: false
 }
