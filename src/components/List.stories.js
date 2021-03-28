@@ -1,36 +1,27 @@
 import React from 'react';
-
-import Task from './Task';
+import List from './List';
 
 export default {
-  component: Task,
-  title: 'List Item',
+  component: List,
+  title: 'List'
 };
 
-const Template = args => <Task {...args} />;
+const Template = args => <List {...args} className="list" />;
+
+const DarkTemplate = args => <List {...args} className="list bg-dark"/>;
+
 
 export const Default = Template.bind({});
+
+export const Dark = DarkTemplate.bind({});
+
+
 Default.args = {
-  task: {
-    id: '1',
-    title: 'Test Task',
-    state: 'TASK_INBOX',
-    updatedAt: new Date(2018, 0, 1, 9, 0),
-  },
+    listItems: ['apples', 'bananas', 'oranges'],
+    loading: false,
 };
 
-export const Pinned = Template.bind({});
-Pinned.args = {
-  task: {
-    ...Default.args.task,
-    state: 'TASK_PINNED',
-  },
-};
-
-export const Archived = Template.bind({});
-Archived.args = {
-  task: {
-    ...Default.args.task,
-    state: 'TASK_ARCHIVED',
-  },
+Dark.args = {
+  listItems: ['apples', 'bananas', 'oranges'],
+  loading: false,
 };

@@ -1,0 +1,26 @@
+
+.list {
+    color: #3b3b3b;
+    font-style: sans-serif;
+    background-color: #fff;
+    border: 1px solid #efefef;
+    padding: .8em 1em;
+    border-radius: .2em;
+    width: 100%;
+}
+
+.list-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .75em;
+}
+.list-item:not(:last-child) {
+    border-bottom: 1px solid #999;
+}
+
+.bg-dark .list {
+    color: #fff;
+    background-color: #3b3b3b;
+    border: 1px solid #2b2b2b;
+}

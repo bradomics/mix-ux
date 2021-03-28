@@ -21,6 +21,9 @@
     color: #fff;
     background-color: #3b3b3b;
 }
+.modal-dark {
+    border: 1px solid #6b6b6b;
+}
 
 .bg-dark {
     color: #fff;
