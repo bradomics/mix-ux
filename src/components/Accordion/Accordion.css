@@ -1,0 +1,30 @@
+.accordion {
+    color: #3b3b3b;
+    font-style: sans-serif;
+    background-color: #fff;
+    border: 1px solid #efefef;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: .8em 1em;
+    border-radius: .2em;
+    width: 100%;
+}
+.accordion-title {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+.collapsed {
+    cursor: pointer;
+}
+.accordion-content-hidden {
+    visibility: hidden;
+    height: 0;
+}
+.accordion-icon {
+
+}
+
+.accordion-item {
+
+}

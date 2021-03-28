@@ -6,7 +6,7 @@ export default {
   title: 'Accordion'
 };
 
-const Template = args => <Accordion {...args} className="card" />;
+const Template = args => <Accordion {...args} className="accordion" />;
 
 const DarkTemplate = args => <Accordion {...args} className="card bg-dark"/>;
 
@@ -19,11 +19,31 @@ export const Dark = DarkTemplate.bind({});
 Default.args = {
     loading: false,
     active: false,
-    title: 'Default Card'
+    title: 'Accordion',
+    accordionItems: [
+        {
+            title: 'Woop',
+            content: 'DoubleWoop'
+        },
+        {
+          title: 'Woop2',
+          content: 'WeepWoop'
+      },
+    ]
 };
 
 Dark.args = {
-  loading: false,
-  active: false,
-  title: 'Dark Card'
+    loading: false,
+    active: false,
+    title: 'Dark Card',
+    accordionItems: [
+        {
+            title: 'Woop',
+            content: 'DoubleWoop'
+        },
+        {
+            title: 'Woop2',
+            content: 'WeepWoop'
+        },
+    ]
 };
