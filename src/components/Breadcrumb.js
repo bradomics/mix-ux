@@ -9,7 +9,7 @@ export default function Breadcrumb({ breadcrumbItems, className }) {
     <div className={`${className}`}>
         {
             breadcrumbItems.map((breadcrumbItem => {
-                return (<a class="breadcrumb-item">{breadcrumbItem} </a>)
+                return (<a class="breadcrumb-item" href={breadcrumbItem.path}>{breadcrumbItem.title} </a>)
             }))
         }
     </div>
@@ -22,6 +22,19 @@ Breadcrumb.propTypes = {
 }
 
 Breadcrumb.defaultProps = {
-  breadcrumbItems: ['home', 'articles', 'article #1'],
+  breadcrumbItems: [
+    {
+      title: 'home',
+      path: '/'
+    },
+    {
+      title: 'articles',
+      path: '/articles'
+    },
+    {
+      title: 'article #1',
+      path: '/article-1'
+    }
+  ],
   loading: false,
 }

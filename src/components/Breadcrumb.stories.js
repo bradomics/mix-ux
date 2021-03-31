@@ -18,10 +18,36 @@ export const Dark = DarkTemplate.bind({});
 
 Default.args = {
     loading: false,
-    breadcrumbItems: ['home', 'articles', 'article #1']
+    breadcrumbItems: [
+      {
+        title: 'home',
+        path: '/'
+      },
+      {
+        title: 'articles',
+        path: '/articles'
+      },
+      {
+        title: 'article #1',
+        path: '/article-1'
+      }
+    ],
 };
 
 Dark.args = {
     loading: false,
-    breadcrumbItems: ['home', 'articles', 'article #1']
+    breadcrumbItems: [
+      {
+        title: 'home',
+        path: '/'
+      },
+      {
+        title: 'articles',
+        path: '/articles'
+      },
+      {
+        title: 'article #1',
+        path: '/article-1'
+      }
+    ],
 };

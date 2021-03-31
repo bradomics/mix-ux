@@ -1,13 +1,16 @@
 .breadcrumb {
     height: 80px;
 }
+
 .breadcrumb-item {
     padding-right: 8px;
     color: #3b3b3b;
 }
+
 .breadcrumb-dark .breadcrumb-item {
     color: #fff;
 }
+
 .breadcrumb-item:not(:last-child)::after {
     content: '/';
     padding-left: 8px;

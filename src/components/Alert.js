@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 import './Alert/Alert.css'
 import { X } from 'react-feather'
 
-export default function Alert({ title, loading, className }) {
+export default function Alert({ title, content, loading, className }) {
     const [isVisible, hideModal] = useState(true);
     return (
         <div className={`${className} ${isVisible && 'visible'}`}>
             <div className={`alert-header ${loading && 'alert-header-loading'}`}>
-                <h3>{loading || title}</h3>
-                {loading || <span className="alert-close-icon" onClick={() => hideModal(!isVisible)}><X/></span>}
+                <p>{loading || title}</p>
+                {loading || <span className="alert-close-icon" onClick={() => hideModal(!isVisible)}><X className="alert-icon"/></span>}
             </div>
-            <div className={`${loading && 'alert-body-loading'} alert-body`}>
+            <div className={`${loading && 'alert-body-loading'} alert-body`} dangerouslySetInnerHTML={{__html: content}}>
 
             </div>
         </div>
@@ -20,10 +20,12 @@ export default function Alert({ title, loading, className }) {
 
 Alert.propTypes = {
   title: PropTypes.string,
+  content: PropTypes.string,
   loading: PropTypes.bool,
 }
 
 Alert.defaultProps = {
   title: 'Alert Title',
+  content: "<p>Alert title here</p>",
   loading: false,
 }
