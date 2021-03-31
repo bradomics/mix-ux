@@ -1,0 +1,29 @@
+.text-area {
+    border-radius: 3px !important;
+    border: 1px solid #efefef;
+    padding-left: .75em !important;
+}
+.text-label-area {
+    padding-bottom: .33em;
+}
+.text-area-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.text-area-dark {
+    background-color: #3b3b3b;
+    color: #fff !important;
+    border-radius: 3px !important;
+    border: 1px solid #333;
+    padding-left: .75em !important;
+    caret-color: #fff !important;
+}
+.text-area-dark::placeholder {
+    color: #fff;
+    opacity: 1;
+}
+.text-label-area-dark {
+    padding-bottom: .33em;
+    color: #fff !important;
+}

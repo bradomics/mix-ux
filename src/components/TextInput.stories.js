@@ -6,9 +6,9 @@ export default {
   title: 'TextInput'
 };
 
-const Template = args => <TextInput {...args} className="card" />;
+const Template = args => <TextInput {...args} className="text-input" />;
 
-const DarkTemplate = args => <TextInput {...args} className="card bg-dark"/>;
+const DarkTemplate = args => <TextInput {...args} className="text-input-dark"/>;
 
 
 export const Default = Template.bind({});
@@ -18,12 +18,20 @@ export const Dark = DarkTemplate.bind({});
 
 Default.args = {
     loading: false,
-    active: false,
-    title: 'Default Card'
+    label: 'Label',
+    labelClassName: 'text-label-input',
+    placeholder: 'Placeholder:',
+    focus: true,
+    disabled: false,
+    inputValue: 'Input value'
 };
 
 Dark.args = {
   loading: false,
-  active: false,
-  title: 'Dark Card'
+  label: 'Label',
+  labelClassName: 'text-label-input-dark',
+  placeholder: 'Placeholder:',
+  focus: true,
+  disabled: false,
+  inputValue: 'Input value'
 };

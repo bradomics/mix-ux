@@ -10,6 +10,7 @@ export default function Accordion({ title, accordionItems, loading, className })
             document.querySelectorAll('.accordion-section')[accordionSectionIndex].classList.remove('collapsed')
             document.querySelectorAll('.accordion-content')[accordionSectionIndex].classList.remove('accordion-content-hidden')
             document.querySelectorAll('.accordion-icon')[accordionSectionIndex].classList.add('accordion-icon-rotated')
+            
         } else {
             document.querySelectorAll('.accordion-section')[accordionSectionIndex].classList.add('collapsed')
             document.querySelectorAll('.accordion-content')[accordionSectionIndex].classList.add('accordion-content-hidden')
@@ -26,9 +27,7 @@ export default function Accordion({ title, accordionItems, loading, className })
                         <div className="accordion-title">
                             {accordionSection.title}<Plus className="accordion-icon"/>
                         </div>
-                        <div className={`accordion-content ${accordionSection.expanded || 'accordion-content-hidden'}`}>
-                            {accordionSection.content}
-                            Here is some sweet accordion content.
+                        <div className={`accordion-content ${accordionSection.expanded || 'accordion-content-hidden'}`} dangerouslySetInnerHTML={{__html: accordionSection.content}}>
                         </div>
                     </div>)
                 })
