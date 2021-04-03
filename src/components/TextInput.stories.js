@@ -7,7 +7,6 @@ export default {
 };
 
 const Template = args => <TextInput {...args} className="text-input" />;
-
 const DarkTemplate = args => <TextInput {...args} className="text-input-dark"/>;
 
 
