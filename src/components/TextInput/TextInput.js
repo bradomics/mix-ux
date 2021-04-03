@@ -1,20 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './TextArea/TextArea.css'
+import './TextInput.css'
 
 
-export default function TextArea({ label, placeholder, focus, disabled, inputValue, loading, className, labelClassName }) {
+export default function TextInput({ label, placeholder, focus, disabled, inputValue, loading, className, labelClassName }) {
   return (
-    <div className="text-area-wrapper">
+    <div className="text-input-wrapper">
         <label className={labelClassName}>{label}</label>
         {
-            <textarea className={`${className}`} type="text" placeholder={placeholder} autoFocus={focus} disabled={disabled} value={inputValue}/>
+            <input className={`${className}`} type="text" placeholder={placeholder} autoFocus={focus} disabled={disabled} value={inputValue}/>
         }
     </div>
   );
 }
 
-TextArea.propTypes = {
+TextInput.propTypes = {
   label: PropTypes.string,
   labelClassName: PropTypes.string,
   placeholder: PropTypes.string,
@@ -24,9 +24,9 @@ TextArea.propTypes = {
   inputValue: PropTypes.string
 }
 
-TextArea.defaultProps = {
+TextInput.defaultProps = {
   label: 'Input Label',
-  labelClassName: 'text-area-label',
+  labelClassName: 'text-input-label',
   placeholder: 'Placeholder:',
   loading: false,
   disabled: false,

@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
-import './ProgressBar/ProgressBar.css'
+import './ProgressBar.css'
 
 
 export default function ProgressBar({ percentComplete, animated, className }) {

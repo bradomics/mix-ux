@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ButtonStories from './Button.stories';
-import './Button/Button.css'
+import './Button.css'
 
 
 export default function Button({ loading, active, text, className }) {

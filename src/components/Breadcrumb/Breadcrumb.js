@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import BreadcrumbStories from './Breadcrumb.stories';
-import './Breadcrumb/Breadcrumb.css'
+import './Breadcrumb.css'
 
 
 export default function Breadcrumb({ breadcrumbItems, className }) {

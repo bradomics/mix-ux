@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import HeaderStories from './Header.stories';
-import './Header/Header.css'
+import './Header.css'
 
 
 export default function Header({ text, loading, className }) {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import './Alert/Alert.css'
+import './Alert.css'
 import { X } from 'react-feather'
 
 export default function Alert({ title, content, loading, className }) {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import './Modal/Modal.css'
+import './Modal.css'
 import { X } from 'react-feather'
 
 export default function Modal({ title, loading, className }) {

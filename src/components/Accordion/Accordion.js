@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Plus } from 'react-feather';
-import './Accordion/Accordion.css'
+import './Accordion.css'
 
 
 export default function Accordion({ title, accordionItems, loading, className }) {

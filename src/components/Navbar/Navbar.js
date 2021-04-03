@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import NavbarStories from './Navbar.stories';
-import './Navbar/Navbar.css'
+import './Navbar.css'
 
 
 export default function Navbar({ title, navbarItems, className }) {

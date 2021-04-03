@@ -11,6 +11,10 @@
     color: #fff;
 }
 
+.breadcrumb-item:hover {
+    color: #efefef;
+}
+
 .breadcrumb-item:not(:last-child)::after {
     content: '/';
     padding-left: 8px;

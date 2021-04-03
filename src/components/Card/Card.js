@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CardStories from './Card.stories';
-import './Card/Card.css'
+import './Card.css'
 
 
-export default function Card({ title, loading, className }) {
+export default function Card({ title, content, loading, className }) {
   return (
     <div className={`${className}`}>
         <div className={`card-title ${loading && 'card-title-loading'}`}>
             <h3>{loading || title}</h3>
         </div>
-        <div className={`${loading && 'card-body-loading'} card-body`}>
+        <div className={`${loading && 'card-body-loading'} card-body`} dangerouslySetInnerHTML={{__html: content}}>
 
         </div>
     </div>
@@ -19,12 +18,14 @@ export default function Card({ title, loading, className }) {
 
 Card.propTypes = {
   title: PropTypes.string,
+  content: PropTypes.string,
   loading: PropTypes.bool,
   active: PropTypes.bool
 }
 
 Card.defaultProps = {
   title: 'Card Title',
+  content: '<p>It is I, the card content.</p>',
   loading: false,
   active: false
 }

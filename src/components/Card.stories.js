@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from './Card';
+import Card from '../components/Card';
 
 export default {
   component: Card,
@@ -19,11 +19,13 @@ export const Dark = DarkTemplate.bind({});
 Default.args = {
     loading: false,
     active: false,
-    title: 'Default Card'
+    title: 'Default Card',
+    content: '<p>Card content here.</p>'
 };
 
 Dark.args = {
   loading: false,
   active: false,
-  title: 'Dark Card'
+  title: 'Dark Card',
+  content: '<p>Card content here.</p>'
 };
