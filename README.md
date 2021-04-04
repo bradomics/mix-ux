@@ -1,5 +1,5 @@
 # Mix UX
-Mix UX is a UI framework for rapid, modern web development in React.
+Mix UX is a UI framework for rapid, feature-rich web development in React.
 
 ## Installation
 
@@ -14,8 +14,6 @@ via yarn:
 ### Accordion
 
 ### Alert
-
-### Background
 
 ### Button
 
@@ -34,3 +32,9 @@ via yarn:
 ### TextArea
 
 ### TextInput
+
+## Classes
+
+### Gradients
+
+### Backgrounds
