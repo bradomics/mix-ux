@@ -14,10 +14,10 @@ jobs:
           npm run build-storybook
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.0
+        run: |
+          npm run deploy-storybook
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: storybook-static # The branch the action should deploy to.
           folder: docs-build # The folder that the build-storybook script generates files.
           target-folder: docs # The folder that we serve our Storybook files from
-          build-script: npm install && npm run build-storybook && npm run start-storybook -s public
-          
