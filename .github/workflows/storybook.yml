@@ -10,7 +10,7 @@ jobs:
         run: |
           git config --global user.email "brad@gradefinity.com"
           git config --global user.name "bradomics"
-          git remote set-url origin git@github.com:bradomics/mix-ux.git
+          git remote set-url origin https://github.com/bradomics/mix-ux.git
       - name: Checkout 🛎️
         uses: actions/checkout@main
       - name: Build Storybook
