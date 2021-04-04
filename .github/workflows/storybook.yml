@@ -6,8 +6,9 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup git authentication
+      - name: Set up git authentication
         run: |
+          git init
           git config --global user.email "brad@gradefinity.com"
           git config --global user.name "bradomics"
           git remote set-url origin https://bradomics:${{ secrets.GITHUB_TOKEN }}@github.com/bradomics/mix-ux
